@@ -1,0 +1,195 @@
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #F0D4FA;
+    font-family: Candara, sans-serif;
+    font-size: 11pt;
+}
+
+*{
+    box-sizing:border-box;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+img {
+     max-width: 100%;
+     height: auto;
+}
+
+  .main {
+    display: flex;
+    flex-direction: row;
+    flex: auto;		
+    align-content: space-between;
+  }
+  
+  article {
+      flex: 2;
+      width: 75%;
+      overflow-y: auto;
+    }
+
+  article .content_section_text {
+      word-wrap: break-word;
+      writing-mode: horizontal-tb;
+      text-align: justify;
+      text-justify: inter-word;
+      text-align-last: left;
+      line-height: 150%;
+  }
+
+  a {
+      color: #FC044F
+  }
+  
+
+  nav {
+      background: #d897f9;
+      height: 80px;
+      width: 100%;
+  }
+
+  nav ul {
+      float: right;
+      margin-right: 60px;
+  }
+
+  nav ul li {
+      display: inline-block;
+      line-height: 80px;
+      margin: 0 2px;
+  }
+
+  nav ul li a {
+      color: #fdfdfd;
+      font-weight: 500;
+      font-size: 20px;
+      padding: 7px 13px;
+      border-radius: 3px;
+      text-transform: uppercase;
+  }
+
+  a.active,a:hover{
+	       background: #E3B0F4;
+	       transition: .5s;
+	   }
+
+  .checkbtn {
+      font-size: 30px;
+      color: white;
+      float: right;
+      line-height: 80px;
+      margin-right: 40px;
+      cursor: pointer;
+      display: none;
+  }
+
+  #check {
+      display: none;
+  }
+
+  @media (max-width: 952px) {
+
+      ul {
+	  position: fixed;
+	  top: 0px;
+      }
+      
+      nav ul li a {
+	  font-size: 16px
+      }
+  }
+      @media (max-width: 858px) {
+	  .checkbtn {
+	      display: block;
+	      margin-right: 40px;
+	  }
+
+	  ul {
+	      position: fixed;
+	      width: 100%;
+	      height: 100vh;
+	      background: #E3B0F4;
+	      top: 0px;
+	      left: -100%;
+	      text-align: center;
+	      transition: all .5s;
+	  }
+
+	  nav ul li {
+	      display: block;
+	      margin: 50px 0;
+	      line-height: 30px;
+	  }
+
+	  nav ul li a {
+	      font-size: 20px;
+	  }
+
+	  a:hover,a.active{
+	      background: none;
+	      color: #FF0059;
+	  }
+
+	  #check:checked ~ ul {
+	      left: 0;
+	  }
+
+	  aside {
+	      position: fixed;
+	      align-self: flex-end;
+	  }
+      }
+
+      section {
+	  background: url(/images/amakeiabackground.png) no-repeat;
+	  background-size: cover;
+	  height: calc(100vh - 80px);
+	  text-align: center;
+      }
+  
+   .footer {
+       max-width: 100%;
+       bottom: 0;
+       background-color: #d897f9;
+       position: relative;
+       text-align: center;
+   }
+
+   h1 {
+       text-align: center;
+   }
+
+   h2 {
+       text-align: center;
+       text-decoration: underline;
+   }
+   aside {
+       flex: 1;
+       width: 25%;
+       height: 400px;
+       margin-left: 40px;
+       float: right;
+       font-style: italic;
+       background-color: #d897f9;
+       overflow-y: auto;
+   }
+   
+   @media only screen and (max-width: 768px) {
+       aside {
+	   flex: 1;
+	   width: 25%;
+	   float: right;
+       }
+       article {
+	   width: 75%;
+	   float: left;
+       }
+   }
+   
+ 
